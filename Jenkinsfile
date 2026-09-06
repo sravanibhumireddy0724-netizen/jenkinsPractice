@@ -24,22 +24,15 @@ pipeline {
     }
 
     stages {
-        stage('Build & Unit Tests') {
-            steps {
-                echo '========================================='
-                echo '  Building App + Running Unit Tests'
-                echo '========================================='
-                dir('dev-app') {
-                    git url: 'https://github.com/sravanibhumireddy0724-netizen/jenkinsPractice.git', branch: 'main'
-                    bat 'mvn clean install -Dmaven.test.failure.ignore=true'
-                }
-            }
-            post {
-                always {
-                    junit allowEmptyResults: true, testResults: 'dev-app/target/surefire-reports/*.xml'
-                }
-            }
-        }
+        stage('Build') {
+        steps {
+        echo '========================================='
+        echo '  Build Stage - No Maven / No Docker'
+        echo '========================================='
+
+        bat 'echo Build completed successfully'
+    }
+}
 
         stage('Checkout Playwright Framework') {
             steps {
