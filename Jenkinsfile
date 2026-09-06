@@ -30,7 +30,7 @@ pipeline {
                 echo '  Building App + Running Unit Tests'
                 echo '========================================='
                 dir('dev-app') {
-                    git url: 'https://github.com/sravanibhumireddy0724-netizen/jenkinsPractice.git', branch: 'master'
+                    git url: 'https://github.com/sravanibhumireddy0724-netizen/jenkinsPractice.git', branch: 'main'
                     bat 'mvn clean install -Dmaven.test.failure.ignore=true'
                 }
             }
