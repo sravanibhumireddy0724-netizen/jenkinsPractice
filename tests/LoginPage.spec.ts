@@ -13,7 +13,7 @@ homePage=new HomePage(page);
 
 });
 
-test('Checking Config file reading - User able to login',async({})=>{
+test('Checking Config file reading - User able to login@smoke',async({})=>{
 await loginPage.goToLoginPage();
 await loginPage.doLogin(process.env.APP_USERNAME!,process.env.APP_PASSWORD!);
 await homePage.isLogoutLinkExist();
