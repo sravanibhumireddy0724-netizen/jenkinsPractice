@@ -71,7 +71,7 @@ pipeline {
         stage('DEV - Sanity Tests') {
             steps {
                 withCredentials([
-                    usernamePassword(credentialsId: 'dev-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
+                    usernamePassword(credentialsId: 'dev-credentials', usernameVariable: 'APP_USERNAME', passwordVariable: 'APP_PASSWORD'),
                     string(credentialsId: 'api-token', variable: 'API_TOKEN'),
                     string(credentialsId: 'oauth-client-id', variable: 'OAUTH_CLIENT_ID'),
                     string(credentialsId: 'oauth-client-secret', variable: 'OAUTH_CLIENT_SECRET'),
@@ -111,7 +111,7 @@ pipeline {
         stage('QA - Regression Tests') {
             steps {
                 withCredentials([
-                    usernamePassword(credentialsId: 'qa-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
+                    usernamePassword(credentialsId: 'qa-credentials', usernameVariable: 'APP_USERNAME', passwordVariable: 'APP_PASSWORD'),
                     string(credentialsId: 'api-token', variable: 'API_TOKEN'),
                     string(credentialsId: 'oauth-client-id', variable: 'OAUTH_CLIENT_ID'),
                     string(credentialsId: 'oauth-client-secret', variable: 'OAUTH_CLIENT_SECRET'),
@@ -151,7 +151,7 @@ pipeline {
         stage('STAGE - Sanity Tests') {
             steps {
                 withCredentials([
-                    usernamePassword(credentialsId: 'stage-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
+                    usernamePassword(credentialsId: 'stage-credentials', usernameVariable: 'APP_USERNAME', passwordVariable: 'APP_PASSWORD'),
                     string(credentialsId: 'api-token', variable: 'API_TOKEN'),
                     string(credentialsId: 'oauth-client-id', variable: 'OAUTH_CLIENT_ID'),
                     string(credentialsId: 'oauth-client-secret', variable: 'OAUTH_CLIENT_SECRET'),
@@ -197,7 +197,7 @@ pipeline {
         stage('PROD - Smoke Tests') {
             steps {
                 withCredentials([
-                    usernamePassword(credentialsId: 'prod-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
+                    usernamePassword(credentialsId: 'prod-credentials', usernameVariable: 'APP_USERNAME', passwordVariable: 'APP_PASSWORD'),
                     string(credentialsId: 'api-token', variable: 'API_TOKEN'),
                     string(credentialsId: 'oauth-client-id', variable: 'OAUTH_CLIENT_ID'),
                     string(credentialsId: 'oauth-client-secret', variable: 'OAUTH_CLIENT_SECRET'),
