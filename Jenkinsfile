@@ -255,7 +255,7 @@ pipeline {
                 )
 
                 emailext(
-                    to: 'naveenanimation20@gmail.com,training@naveenautomationlabs.com',
+                    to: 'sravanibhumireddy0724@gmail.com',
                     subject: "Playwright Jenkins — ${statusEmoji} ${buildStatus} — Build #${env.BUILD_NUMBER}",
                     mimeType: 'text/html',
                     body: """
