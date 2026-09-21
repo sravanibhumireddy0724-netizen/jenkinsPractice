@@ -29,7 +29,7 @@ expect.soft(await homePage.isLogoutLinkExist()).toBeTruthy();
 
 test('Verifyting Login Error Message', async ({ page }) => {
 await loginPage.doLogin('dev123@nal.com23','Test@123');
-console.log("hi hello123");
+console.log("hi hello1234");
 expect.soft(await loginPage.isInvalidLoginErrorDisplayed()).toBeTruthy();
 });
 
